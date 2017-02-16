@@ -1,0 +1,11 @@
+followings 
+
+<ul class="user-list">
+<% @f_users.each do |user| %>
+   <li>
+   <%= gravatar_for(user) %>
+  
+   <%= link_to user.name, user_path(user.id) %>
+   </li>
+<% end %>
+</ul>
