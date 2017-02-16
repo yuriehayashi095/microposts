@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
     end
     
     def following?(other_user)
-        follower_users.inlude?(other_user)
+        following_users.include?(other_user)
     end
     
 end
