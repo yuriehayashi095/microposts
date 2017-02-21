@@ -1,0 +1,9 @@
+<h1>Followings lists</h1><br>
+
+<% @f_user.each do |user| %>
+<div class="col-md-6 col-md-offset-3">
+   <%= gravatar_for(user) %>
+   <%= link_to user.name, user %>
+</div>
+<br>
+<% end %>

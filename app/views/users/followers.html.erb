@@ -1,0 +1,9 @@
+<h1>Followers lists</h1>
+<br>
+
+<% @fs_user.each do |user| %>
+<div class="col-md-6 col-md-offset-3">
+   <%= gravatar_for(user) %></br>
+   <%= link_to user.name, user %></br>
+</div>
+<% end %>
