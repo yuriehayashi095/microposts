@@ -121,7 +121,6 @@ aside {
 }
 
 .gravatar {
-    float: left;
     margin-right: 10px;
 }
 
@@ -163,4 +162,10 @@ aside {
     height: 100px;
     margin-bottom: 5px;
   }
+}
+
+ul.user-list li {
+    list-style:none;
+    height: 120px;
+    width: 200px;
 }
