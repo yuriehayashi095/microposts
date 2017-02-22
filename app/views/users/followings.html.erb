@@ -2,18 +2,10 @@
 <br>
 
 <% @f_user.each do |user| %>
-<<<<<<< HEAD
-<div class="col-md-6 col-md-offset-3">
-   <%= gravatar_for(user) %>
-   <%= link_to user.name, user %>
-</div>
-<br>
-=======
    <ul style="list-style:none;">
    <li>
    <%= gravatar_for(user) %>
    <%= link_to user.name, user %>
    </li>
    </ul>
->>>>>>> following-followers
 <% end %>
