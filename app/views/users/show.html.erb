@@ -8,7 +8,8 @@
         </h1>
         <%= @user.profile %><br>
         <%= link_to "followings", followings_user_path(@user.id) %><br>
-        <%= link_to "followers", followers_user_path(@user.id) %>
+        <%= link_to "followers", followers_user_path(@user.id) %><br>
+        <%= link_to "favorites", favorites_user_path(@user.id) %>
         </section>
     </aside>
     <div class="col-md-8">

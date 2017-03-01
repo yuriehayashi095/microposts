@@ -63,6 +63,12 @@ class UsersController < ApplicationController
     @fs_user = @user.follower_users
   end
   
+  
+  def favorites
+    @user = User.find(params[:id])
+    @favorites = @user.favorite_posts
+  end
+  
   private
   
   def user_params

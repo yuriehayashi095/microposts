@@ -20,6 +20,16 @@ class MicropostsController < ApplicationController
         redirect_to request.referrer || root_url
     end
     
+    def favorite
+        @micropost = microposts.find_by(id: params[:id])
+        @micropost.favorite
+            flash[:success] = "Micropost favorited!"
+        return redirect_to root_url
+        @favorite_items = current_user.favorite_items.includes(:user).order(created at: :desc)
+        render 'static_pages/favorite'
+    end
+        
+    
     private
     def micropost_params
         params.require(:micropost).permit(:content)
